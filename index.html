@@ -26,6 +26,7 @@
 
         /* Iframe styling */
         iframe {
+            flex: 1;
             border: 1px solid #DBDBDB;
             border-radius: 5px;
             height: 100%;
@@ -88,11 +89,11 @@
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .container {
-                flex-direction: column;
+                flex-direction: column; /* Stack iframes vertically on smaller screens */
             }
 
             iframe {
-                height: 300px;
+                height: 300px; /* Set a fixed height for smaller screens */
             }
         }
     </style>
