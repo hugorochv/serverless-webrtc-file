@@ -1,4 +1,4 @@
-# Serverless WebRTC Chat
+# Serverless WebRTC File
 
-* DEMO : https://owebio.github.io/serverless-webrtc-chat/
-* YOUTUBE : https://youtu.be/NEuialr6F5A
+Simple P2P File Transfer without signaling server
+
