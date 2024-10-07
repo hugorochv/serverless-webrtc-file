@@ -91,11 +91,11 @@ createOfferField.oninput = toggleCreateBtn;
 createBtn.onclick = createAnswerSDP;
 
 // Chat-related Listeners
-sendBtn.onclick = parent.sendMSG;
+sendBtn.onclick = sendMSG;
 
 msgPrompt.onkeydown = (event) => {
   if (event.key === "Enter") {
-    parent.sendMSG();
+    sendMSG();
   }
 };
 
