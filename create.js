@@ -1,5 +1,3 @@
-import { disableTextareas } from "./common.js";
-
 // ICE and WebRTC setup
 // var server       = { urls: "stun:stun.l.google.com:19302" };
 const sdpConstraints = { optional: [{ RtpDataChannels: true }] };
@@ -77,7 +75,7 @@ function addMSG(msg, who) {
   wrap.appendChild(div);
 
   let whoSpan = document.createElement("span");
-  whoSpan.innerHTML = who;
+  whoSpan.innerHTML = `${who}:`;
   whoSpan.classList.add("who");
   div.appendChild(whoSpan);
 
@@ -91,7 +89,6 @@ function addMSG(msg, who) {
   chatScreenWP.scrollTop = chatScreen.scrollHeight;
 }
 
-
 function sendMSG() {
   var value = msgPrompt.value.trim();
   if (value && dcChat) {
@@ -99,6 +96,11 @@ function sendMSG() {
     addMSG(value, "me");
     msgPrompt.value = "";
   }
+}
+
+function disableTextareas() {
+  const textareas = document.querySelectorAll("textarea");
+  textareas.forEach((textarea) => (textarea.disabled = true));
 }
 
 msgPrompt.onkeydown = (event) => {

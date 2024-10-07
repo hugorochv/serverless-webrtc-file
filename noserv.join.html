@@ -1,24 +1,33 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title> JOIN WebRTC channel </title>
-  <link href="noserv.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join WebRTC Channel</title>
+    <link href="noserv.css" rel="stylesheet">
 </head>
 <body>
-<h2>  JOIN WebRTC channel  <span id="status"> init </span> </h2>
-<h3> 2.GET Offer's SDP</h3>
-<textarea id="creater-sdp" placeholder="HERE COPY & PASTE [1.CREATE Offer's SDP]"></textarea>
-<h3> 3.CREATE Participant'S SDP </h3>
-<textarea id="joiner-sdp"></textarea>
-<button id="create-btn" disabled>CREATE</button> 
-<h3> CHAT </h3>
-<div id="chat">
-  <div id="chat-screen-wp">
-    <div id="chat-screen"></div>
-  </div>
-  <div id="ct"><input id="msg" disabled><button id="send" disabled>send</button></div>
-</div>
-<script type="module" src="join.js"></script>
+    <h2>Joiner <span id="status">Init</span></h2>
+    
+    <h3>2. Paste Offer SDP</h3>
+    <textarea id="creater-sdp" placeholder="Here copy and paste [1. Create Offer SDP]"></textarea>
+    
+    <button id="create-btn" class="full-width" disabled>CREATE</button>
+
+    <h3>3. Copy Answer SDP</h3>
+    <textarea id="joiner-sdp" disabled placeholder="Your Participant's SDP will appear here..."></textarea>
+
+    <h3>P2P Chat</h3>
+    <div id="chat">
+        <div id="chat-screen-wp" class="clearfix">
+            <div id="chat-screen"></div>
+        </div>
+        <div id="ct">
+            <input id="msg" disabled placeholder="Type your message...">
+            <button id="send" disabled>Send</button>
+        </div>
+    </div>
+    
+    <script src="join.js"></script>
 </body>
 </html>
